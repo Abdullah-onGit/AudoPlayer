@@ -1,8 +1,9 @@
 <div id="parentDiv">
   <input type="file" accept="audio/*" (change)="onSelect($event)" />
-  <div style="display: flex;flex-direction: row;">
-    <button (click)="backward()"><<</button>
-    <audio style="width: 50vw;" #myplayer controls></audio>
-    <button (click)="forward()">>></button>
+  <div id="playerDiv">
+    <button mat-raised-button color="primary" (click)="backward()"><<</button>
+   
+    <button mat-raised-button color="primary" (click)="forward()">>></button>
   </div>
+  <audio #myplayer controls></audio>
 </div>
