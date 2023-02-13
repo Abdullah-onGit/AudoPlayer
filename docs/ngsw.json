@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1676229622674,
+  "timestamp": 1676314126199,
   "index": "https://abdullah-ongit.github.io/AudoPlayer/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://abdullah-ongit.github.io/AudoPlayer/favicon.ico",
         "https://abdullah-ongit.github.io/AudoPlayer/index.html",
-        "https://abdullah-ongit.github.io/AudoPlayer/main.17772c30792e2adc.js",
+        "https://abdullah-ongit.github.io/AudoPlayer/main.67422edb8954e33c.js",
         "https://abdullah-ongit.github.io/AudoPlayer/manifest.webmanifest",
         "https://abdullah-ongit.github.io/AudoPlayer/polyfills.5c7be76d89214cf9.js",
         "https://abdullah-ongit.github.io/AudoPlayer/runtime.da8c4f5ae46e1bfe.js",
@@ -52,8 +52,8 @@
     "https://abdullah-ongit.github.io/AudoPlayer/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://abdullah-ongit.github.io/AudoPlayer/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://abdullah-ongit.github.io/AudoPlayer/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://abdullah-ongit.github.io/AudoPlayer/index.html": "406fb9156c92b883a1f689303b0145a03df3145c",
-    "https://abdullah-ongit.github.io/AudoPlayer/main.17772c30792e2adc.js": "f070678cb736926b1681c293c48bda44f61b2771",
+    "https://abdullah-ongit.github.io/AudoPlayer/index.html": "633cccc2b1818b828261a356e45bd125bfc9c8f6",
+    "https://abdullah-ongit.github.io/AudoPlayer/main.67422edb8954e33c.js": "1a7540c5f38ba2fdf03916ad5beb4b93b07b6fe3",
     "https://abdullah-ongit.github.io/AudoPlayer/manifest.webmanifest": "5809651e7a0d4192b0e99440ae5d610e4c877142",
     "https://abdullah-ongit.github.io/AudoPlayer/polyfills.5c7be76d89214cf9.js": "76c7766fc4614575bf0d30596ea32c8dc05f87df",
     "https://abdullah-ongit.github.io/AudoPlayer/runtime.da8c4f5ae46e1bfe.js": "3d21c4458bd16a90e794bf6da591500c7913f3d5",
