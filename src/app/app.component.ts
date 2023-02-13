@@ -12,6 +12,7 @@ export class AppComponent {
   timeList = [1, 2, 3, 5, 10]
   backwardTime = 10;
   forwardTime = 10;
+  volumn = 50;
   onSelect(event) {
     this.myplayer.nativeElement.src = URL.createObjectURL(event.target.files[0])
     this.myplayer.nativeElement.play();
@@ -23,5 +24,9 @@ export class AppComponent {
   }
   backward() {
     this.audioPlayer.currentTime -= this.backwardTime;
+  }
+
+  onVolumnChanges() {
+    this.audioPlayer.volume = this.volumn / 100;
   }
 }

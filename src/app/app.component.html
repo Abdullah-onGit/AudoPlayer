@@ -17,7 +17,50 @@
         <mat-icon>fast_forward</mat-icon>
       </button>
     </div>
+    <div style="min-width: 10px;">
+      <div style="width: 43px">{{volumn}} %</div>
+      <input [(ngModel)]="volumn" (input)="onVolumnChanges()" orient=vertical type="range">
+    </div>
   </div>
   <audio #myplayer controls></audio>
 </div>
-<input orient=vertical type="range">
+
+<!-- <style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    height: 100%;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  
+  .item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .item4 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+  }
+  .item5{
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  </style>
+
+<div class="grid-container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>  
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+</div> -->
