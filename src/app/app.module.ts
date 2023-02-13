@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialsModule } from './materials/materials.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    FormsModule,
     MaterialsModule,
     BrowserModule,
     ServiceWorkerModule.register('ngsw-worker.js', {

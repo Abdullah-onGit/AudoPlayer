@@ -1,9 +1,23 @@
 <div id="parentDiv">
   <input type="file" accept="audio/*" (change)="onSelect($event)" />
   <div id="playerDiv">
-    <button mat-raised-button color="primary" (click)="backward()"><<</button>
-   
-    <button mat-raised-button color="primary" (click)="forward()">>></button>
+    <div>
+      <button mat-raised-button color="primary" (click)="backward()">
+        <mat-icon>fast_rewind</mat-icon>
+      </button>
+      <select [(ngModel)]="backwardTime">
+        <option *ngFor="let t of timeList" [ngValue]="t">{{t}}</option>
+      </select>
+    </div>
+    <div>
+      <select [(ngModel)]="forwardTime">
+        <option *ngFor="let t of timeList" [ngValue]="t">{{t}}</option>
+      </select>
+      <button mat-raised-button color="primary" (click)="forward()">
+        <mat-icon>fast_forward</mat-icon>
+      </button>
+    </div>
   </div>
   <audio #myplayer controls></audio>
 </div>
+<input orient=vertical type="range">
