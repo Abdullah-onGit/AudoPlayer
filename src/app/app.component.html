@@ -1,66 +1,51 @@
 <div id="parentDiv">
-  <input type="file" accept="audio/*" (change)="onSelect($event)" />
+  <div id="header">
+    <input type="file"
+      accept="audio/*"
+      multiple
+      style="text-align: center;"
+      (change)="onSelect($event)" />
+    <div style="max-height: 200px; overflow-y: auto;">
+      <button mat-stroked-button
+        [color]="i==currentFileIndex?'primary':''"
+        (click)="play(i)"
+        *ngFor="let file of selectedFiles;let i=index">{{file.name}}</button>
+    </div>
+  </div>
   <div id="playerDiv">
     <div>
-      <button mat-raised-button color="primary" (click)="backward()">
+      <button mat-raised-button
+        color="primary"
+        (click)="backward()">
         <mat-icon>fast_rewind</mat-icon>
       </button>
       <select [(ngModel)]="backwardTime">
-        <option *ngFor="let t of timeList" [ngValue]="t">{{t}}</option>
+        <option *ngFor="let t of timeList"
+          [ngValue]="t">{{t}}</option>
       </select>
     </div>
     <div>
       <select [(ngModel)]="forwardTime">
-        <option *ngFor="let t of timeList" [ngValue]="t">{{t}}</option>
+        <option *ngFor="let t of timeList"
+          [ngValue]="t">{{t}}</option>
       </select>
-      <button mat-raised-button color="primary" (click)="forward()">
+      <button mat-raised-button
+        color="primary"
+        (click)="forward()">
         <mat-icon>fast_forward</mat-icon>
       </button>
     </div>
     <div style="min-width: 10px;">
       <div style="width: 43px">{{volumn}} %</div>
-      <input [(ngModel)]="volumn" (input)="onVolumnChanges()" orient=vertical type="range">
+      <input [(ngModel)]="volumn"
+        (input)="onVolumnChanges()"
+        orient=vertical
+        type="range">
     </div>
   </div>
-  <audio #myplayer controls></audio>
+  <div id="footer">
+    <audio #myplayer
+      controls></audio>
+    <p>{{selectedFiles[currentFileIndex].name}}</p>
+  </div>
 </div>
-
-<!-- <style>
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 10px;
-    background-color: #2196F3;
-    padding: 10px;
-    height: 100%;
-  }
-  
-  .grid-container > div {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
-  }
-  
-  .item1 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-  .item4 {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 3;
-  }
-  .item5{
-    grid-column-start: 1;
-    grid-column-end: 4;
-  }
-  </style>
-
-<div class="grid-container">
-  <div class="item1">1</div>
-  <div class="item2">2</div>
-  <div class="item3">3</div>  
-  <div class="item4">4</div>
-  <div class="item5">5</div>
-</div> -->
